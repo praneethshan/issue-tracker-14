@@ -18,7 +18,7 @@ import delay from 'delay';
 // Create interface to make the shape of form base on schema
 type IssueForm = z.infer<typeof createIssueSchema>;
 
-const NewIssuePage = async () => {
+const NewIssuePage = () => {
   // Use to redirect
   const router = useRouter();
   // Use react hook form to work with form
@@ -47,8 +47,6 @@ const NewIssuePage = async () => {
       setError('Unexpected error occured.');
     }
   });
-
-  await delay(2000);
 
   return (
     <div className="max-w-xl ">

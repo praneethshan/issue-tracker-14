@@ -1,5 +1,5 @@
 /** @format */
-import IsssueStatusBadge from '@/app/components/IsssueStatusBadge';
+import IsssueStatusBadge from '@/app/components/IssueStatusBadge';
 import prisma from '@/prisma/client';
 import { Card, Flex, Heading } from '@radix-ui/themes';
 import { notFound } from 'next/navigation';
