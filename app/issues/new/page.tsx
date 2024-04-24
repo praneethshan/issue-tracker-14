@@ -13,11 +13,12 @@ import { createIssueSchema } from '@/app/validationSchemas';
 import { z } from 'zod';
 import ErrorMessage from '@/app/components/ErrorMessage';
 import Spinner from '@/app/components/Spinner';
+import delay from 'delay';
 
 // Create interface to make the shape of form base on schema
 type IssueForm = z.infer<typeof createIssueSchema>;
 
-const NewIssuePage = () => {
+const NewIssuePage = async () => {
   // Use to redirect
   const router = useRouter();
   // Use react hook form to work with form
@@ -46,6 +47,8 @@ const NewIssuePage = () => {
       setError('Unexpected error occured.');
     }
   });
+
+  await delay(2000);
 
   return (
     <div className="max-w-xl ">
